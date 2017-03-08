@@ -67,7 +67,7 @@ define systemd::service (
   validate_array($requires)
   validate_array($conflicts)
 
-  include ::systemd
+  contain ::systemd
 
   file { "/etc/systemd/system/${servicename}.service":
     ensure  => 'present',
